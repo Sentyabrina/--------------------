@@ -1,0 +1,37 @@
+// Год.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+  setlocale(LC_ALL, "Russian");
+	double dol;
+	double griv;
+	double kurs;
+	int m;
+	std:: cout<<"Выберите способ\n";
+	std:: cout<<"1.Гривны в доллары\n";
+	std:: cout<<"2.Доллары в гривны\n";
+	std:: cout<<"Ваш выбор ";
+	std:: cin>>m;
+	switch(m)
+	{
+		case 1: std:: cout<<"Введите курс ";
+				std:: cin>>kurs;
+				std:: cout<<"Введите сумму ";
+				std:: cin>>griv;
+				dol=griv*kurs;
+				std:: cout<<"Результат "<<dol<<"\n";
+				break;
+		case 2: std:: cout<<"Введите курс ";
+				std:: cin>>kurs;
+				std:: cout<<"Введите сумму ";
+				std:: cin>>dol;
+				griv=dol/kurs;
+				std:: cout<<"Результат "<<griv<<"\n";
+				break;
+	}
+	return 0;
+}
