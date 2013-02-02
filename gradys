@@ -1,0 +1,18 @@
+// Градусы.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+int _tmain(int argc, _TCHAR* argv[])
+{  
+	int cels;
+	double far;
+	setlocale(LC_ALL, "Russian");
+	std:: cout<< "Введите значение в градусах Цельсия\n";
+	std:: cin>>cels;
+	far = 1.8*cels + 32;
+	std:: cout<< "Значение в градусах Фаренгейта = "<<far<<"\n";
+	return 0;
+}
+
